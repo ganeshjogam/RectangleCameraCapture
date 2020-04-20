@@ -1,0 +1,2 @@
+rootProject.name='RectangleCameraCapture'
+include ':app'

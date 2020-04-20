@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_surface_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/preview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SurfaceView
+                android:id="@+id/camera_preview_surface"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/border_camera"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:text="Align your document within this box and capture image" />
+
+            <View
+                android:id="@+id/border_camera"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/border" />
+            <!---Customize your views and button-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    android:id="@+id/gallery_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_photo_album" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Gallery"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/make_photo_button"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_trigger_normal" />
+
+                <ImageView
+                    android:id="@+id/flash"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_flash_off"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
